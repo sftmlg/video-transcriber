@@ -181,8 +181,8 @@ class Transcriber:
                 end=seg.end + time_offset,
                 text=seg.text.strip(),
                 words=words,
-                avg_logprob=seg.avg_log_prob,
-                no_speech_prob=seg.no_speech_prob
+                avg_logprob=getattr(seg, 'avg_logprob', getattr(seg, 'avg_log_prob', 0.0)),
+                no_speech_prob=getattr(seg, 'no_speech_prob', 0.0)
             )
             segments.append(segment)
 
