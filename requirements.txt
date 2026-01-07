@@ -1,0 +1,19 @@
+# Core transcription
+faster-whisper>=1.0.0
+torch>=2.0.0
+
+# Audio processing
+pydub>=0.25.1
+
+# CLI
+click>=8.1.0
+rich>=13.0.0
+
+# Output formatting
+srt>=3.5.0
+
+# Optional: Speaker diarization
+# pyannote.audio>=3.0.0
+
+# Optional: Chapter detection with LLM
+anthropic>=0.18.0
